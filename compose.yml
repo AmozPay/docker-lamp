@@ -1,0 +1,13 @@
+
+services:
+  lamp:
+    image: ghcr.io/amozpay/lamp
+    build: ./
+    ports:
+      - 8080:80 # apache
+      - 3306:3306 # mysql
+    volumes:
+      - ./www:/var/www/html
+      - ./mysql:/var/lib/
+
+
